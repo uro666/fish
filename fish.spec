@@ -21,11 +21,13 @@ BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(libpcre2-8)
 BuildRequires:	pkgconfig(python)
 %if %{with tests}
-# tests/checks/jobs.fish requires bg and fg provided by bash
+# tests/checks/jobs.fish requires bg and fg provided by bash/sh
+# and tools from coreutils
 BuildRequires:	bash
+BuildRequires:	coreutils
 # for tests/check/git.fish
 BuildRequires:	git
-# for tests/check/mux-multiline-prompt.fish
+# for tests/check/mux-multiline-prompt.fish also requires coreutils
 BuildRequires:	less
 # for tests/checks/locale-numeric.fish
 BuildRequires:	locales
