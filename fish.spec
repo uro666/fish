@@ -11,6 +11,10 @@ Group:		Shells
 URL:			https://github.com/fish-shell/fish-shell/
 Source0:	https://github.com/fish-shell/fish-shell/releases/download/%{version}/%{name}-%{version}.tar.xz
 Source1:	%{name}-%{version}-vendor.tar.gz
+# Patch0 fixes some flaky tests in 4.0.2
+# https://github.com/fish-shell/fish-shell/commit/17b4b39c8b461e30d612e61c86762f1226cbb04a
+Patch0:		fish-4.0.2-fix-tests.patch
+
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:	cmake
 BuildRequires:	gettext
