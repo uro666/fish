@@ -22,6 +22,8 @@ BuildRequires:	pkgconfig(libpcre2-8)
 BuildRequires:	pkgconfig(python)
 %if %{with tests}
 BuildRequires:	tmux
+# tests/check/jobs.fish requires ps from procps-ng
+BuildRequires:	procps-ng
 %endif
 # tab completion wants man-db
 Recommends:	man-db
