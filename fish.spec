@@ -3,12 +3,12 @@
 %bcond_without tests
 
 Summary:	A friendly interactive shell
-Name:			fish
+Name:		fish
 Version:	4.0.2
 Release:	1
 License:	GPLv2 and BSD and ISC and LGPLv2+ and MIT
 Group:		Shells
-URL:			https://github.com/fish-shell/fish-shell/
+URL:		https://github.com/fish-shell/fish-shell/
 Source0:	https://github.com/fish-shell/fish-shell/releases/download/%{version}/%{name}-%{version}.tar.xz
 Source1:	%{name}-%{version}-vendor.tar.gz
 
