@@ -21,9 +21,17 @@ BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(libpcre2-8)
 BuildRequires:	pkgconfig(python)
 %if %{with tests}
-BuildRequires:	tmux
+# tests/checks/jobs.fish requires bg and fg provided by bash
+BuildRequires:	bash
+# for tests/check/git.fish
+BuildRequires:	git
+# for tests/check/mux-multiline-prompt.fish
+BuildRequires:	less
+# for tests/checks/locale-numeric.fish
+BuildRequires:	locales
 # tests/check/jobs.fish requires ps from procps-ng
 BuildRequires:	procps-ng
+BuildRequires:	tmux
 %endif
 # tab completion wants man-db
 Recommends:	man-db
