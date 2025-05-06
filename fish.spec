@@ -28,9 +28,12 @@ BuildRequires:	coreutils
 # for tests/check/git.fish
 BuildRequires:	git
 # for tests/check/mux-multiline-prompt.fish also requires coreutils
+BuildRequires:	grep
 BuildRequires:	less
 # for tests/checks/locale-numeric.fish
 BuildRequires:	locales
+BuildRequires:	locales-en
+BuildRequires:	locales-fr
 # tests/check/jobs.fish requires ps from procps-ng
 BuildRequires:	procps-ng
 BuildRequires:	tmux
